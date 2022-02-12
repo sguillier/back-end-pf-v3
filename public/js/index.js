@@ -1,7 +1,8 @@
 import {URL_RAIZ} from "../url/index.js"
 
 
-const Temp = async () => {
+// const Temp = async () => {
+    console.log('URL_RAIZ: ', URL_RAIZ)
     const request = await fetch(URL_RAIZ + '/api/auth/isauth')
     const res = await request.json()
     let html = ''
@@ -23,7 +24,7 @@ const Temp = async () => {
             window.location.href = URL_RAIZ + "/login";
         })
     }
-}
+// }
 
-Temp()
+// Temp()
 
