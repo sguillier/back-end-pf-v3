@@ -1,0 +1,72 @@
+/*----------------------------------------------------------------------*/
+/*     VARIABLES GLOBALES    */
+:root{
+    /**COLORES**/
+    --colorBDDD : rgb(13, 13, 52); /*Blue Dark Dark Dark*/
+    --colorBDD : rgb(29, 29, 52); /*Blue Dark Dark*/
+    --colorBD : rgb(52, 52, 99); /*Blue Dark*/
+    --colorB  : rgb(69, 69, 255); /*Blue*/
+    --colorBL : rgb(113, 113, 255); /*Blue Light*/
+    --colorBLL : rgb(189, 189, 255); /*Blue Light Light*/
+    --colorBLLL : rgb(212, 212, 255); /*Blue Light Light Light*/
+    
+    --colorR : rgb(211, 13, 52);  /*Red*/
+    --colorRD : rgb(150, 0, 58);  /*Red Dark*/
+    --colorRDD : rgb(80, 0, 40);  /*Red Dark Dark*/
+  
+    --colorY : rgb(255, 183, 48); /*Yellow*/
+    --colorGD : rgb(69, 69, 69);  /*Gray Dark*/
+    --colorGD : rgb(21, 21, 21);  /*Gray Dark Dark*/
+    --colorN : rgb(181, 255, 211); /*Neon*/
+  
+    
+    --colorA1:  rgb(255, 183, 48);
+  
+
+    /**MEDIDAS**/
+    --anchoPagina : 1100px;
+    --altoNavbar : 40px;  
+    --anchoModal : 400px;
+    --altoModal : 300px;
+    
+  }
+  
+  
+  /*----------------------------------------------------------------------*/
+  /*     DEFINICION GENERALES    */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  body {
+    font-family: sans-serif;
+    padding-top: var(--altoNavbar);
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: var(--anchoPagina);
+    margin: 0 auto;
+    text-align:center;
+    color:var(--colorGD)
+  }
+  
+
+
+
+
+h1 {
+    color: blue;
+}
+
+
+.form-chat-input{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.nav-link{
+    cursor: pointer;
+}

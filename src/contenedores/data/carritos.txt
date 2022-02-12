@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "creado": "11/2/2022 23:41:03",
+    "modificado": "11/2/2022 23:41:03",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Calculadora",
+        "precio": "1234",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 2
+      },
+      {
+        "id": 2,
+        "nombre": "Goma",
+        "precio": "689",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 2
+      }
+    ],
+    "total": 3846
+  },
+  {
+    "id": 3,
+    "creado": "11/2/2022 23:41:25",
+    "modificado": "11/2/2022 23:41:25",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Calculadora",
+        "precio": "1234",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 3
+      },
+      {
+        "id": 2,
+        "nombre": "Goma",
+        "precio": "689",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 8
+      }
+    ],
+    "total": 9214
+  },
+  {
+    "id": 2,
+    "creado": "11/2/2022 23:41:15",
+    "modificado": "11/2/2022 23:41:46",
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Calculadora",
+        "precio": "1234",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png",
+        "q": 5
+      },
+      {
+        "id": 2,
+        "nombre": "Goma",
+        "precio": "689",
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-256.png",
+        "q": 8
+      }
+    ],
+    "total": 11682
+  }
+]
