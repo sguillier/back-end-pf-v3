@@ -1,17 +1,18 @@
+import {URL_RAIZ} from "../../../url/index.js"
 import EnviaCarrito from "./EnviaCarrito.js"
 import IngresaProducto from "./IngresaProducto.js"
 import Productos from "./Productos.js"
 import Carritos from "./Carritos.js"
 
 
-const NavBar = async () => {
-    
+const NavBar = async (user) => {
+
     //<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> </button>
     //<span class="navbar-toggler-icon"></span>
-        
+
 
     let html = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Hola ${user.firstname}</a>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             
@@ -33,29 +34,46 @@ const NavBar = async () => {
 
         </ul>
         </div>
+        <div>
+            <a id="logout-button" class="nav-logout">logout</a>
+        </div>
       </nav>`
 
-    
+
     document.getElementById('NavBar').innerHTML = html
 
     const linkProductos = document.getElementById('link-productos')
-    linkProductos.addEventListener('click', ()=>{
+    linkProductos.addEventListener('click', () => {
         Productos()
     })
 
     const linkIngresaProducto = document.getElementById('link-ingresa-producto')
-    linkIngresaProducto.addEventListener('click', ()=>{
+    linkIngresaProducto.addEventListener('click', () => {
         IngresaProducto()
     })
 
     const linkEnviaCarrito = document.getElementById('link-envia-carrito')
-    linkEnviaCarrito.addEventListener('click', ()=>{
+    linkEnviaCarrito.addEventListener('click', () => {
         EnviaCarrito()
     })
 
     const linkCarrito = document.getElementById('link-carritos')
-    linkCarrito.addEventListener('click', ()=>{
+    linkCarrito.addEventListener('click', () => {
         Carritos()
+    })
+
+
+    const botonLogOut = document.getElementById("logout-button")
+    botonLogOut.addEventListener('click', async () => {
+        const request = await fetch(URL_RAIZ + '/api/auth/logout')
+        html = `
+            <div class="session-display-content">
+                <h2> Adios!! </h2>
+            </div>`
+        document.getElementById('main').innerHTML = html
+        setTimeout(
+            () => { window.location.href = URL_RAIZ + "" }, 1000
+        )
     })
 
 

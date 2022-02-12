@@ -22,5 +22,13 @@
     "lastname": "Sebas",
     "age": "39",
     "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/7-Assistant-256.png"
+  },
+  {
+    "id": "viole@correo.com",
+    "password": "$2b$10$yuWwtxgKia9UxLmR.Y0VLejx4OlPLgh7pYCqmA6tDlowH5Rmq7B5O",
+    "firstname": "Violeta",
+    "lastname": "Guillier",
+    "age": "9",
+    "avatar": "https://cdn2.iconfinder.com/data/icons/avatars-60/5985/7-Assistant-256.png"
   }
 ]

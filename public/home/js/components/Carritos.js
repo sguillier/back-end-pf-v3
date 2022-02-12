@@ -1,5 +1,5 @@
 import EditaCarrito from "./EditaCarrito.js"
-import {URL_RAIZ} from "../url.js"
+import {URL_RAIZ} from "../../../url/index.js"
 
 const Carritos = async () => {
 

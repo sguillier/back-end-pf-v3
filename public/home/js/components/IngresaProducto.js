@@ -1,26 +1,27 @@
-import {URL_RAIZ} from "../url.js"
+import {URL_RAIZ} from "../../../url/index.js"
 
-const EditaProducto = (item) => {
+
+const IngresaProducto = () => {
 
     document.getElementById('main').innerHTML = `
     <div class="jumbotron">
-        <h2>Editar Producto</h2>
+        <h2>Ingrese Producto</h2>
         <br>
 
-        <form id="form-edita-producto">
+        <form id="form-producto">
             <div class="form-group">
                 <label for="nombre"><b>Nombre</b></label>
-                <input id="edita-producto-nombre" class="form-control" type="text" name="nombre" value=${item.nombre}>
+                <input id="producto-nombre" class="form-control" type="text" name="nombre">
             </div>
 
             <div class="form-group">
                 <label for="precio"><b>Precio</b></label>
-                <input id="edita-producto-precio" class="form-control" type="number" name="precio" value=${item.precio}>
+                <input id="producto-precio" class="form-control" type="number" name="precio">
             </div>
 
             <div class="form-group">
                 <label for="url"><b>Foto URL*</b></label>
-                <input id="edita-producto-url" class="form-control" type="url" name="url" value=${item.url}>
+                <input id="producto-url" class="form-control" type="url" name="url">
             </div>
 
             <details>
@@ -45,32 +46,27 @@ const EditaProducto = (item) => {
     `
 
 
-    const formulario = document.getElementById('form-edita-producto')
+    const formulario = document.getElementById('form-producto')
     formulario.addEventListener('submit', (e) => {
         e.preventDefault()
 
-        const nombre = document.getElementById('edita-producto-nombre').value
-        const precio = document.getElementById('edita-producto-precio').value
-        const url = document.getElementById('edita-producto-url').value
-        const data = { nombre, precio, url };
-        const urlApi = URL_RAIZ + '/api/productos/' + item.id;
-
-        console.log(data)
-        console.log('url: ', urlApi)
-
+        const nombre = document.getElementById('producto-nombre').value
+        const precio = document.getElementById('producto-precio').value
+        const url = document.getElementById('producto-url').value
+        const data = {nombre, precio, url};
+        const urlApi = URL_RAIZ + '/api/productos';
+        
         fetch(urlApi, {
-            method: 'PUT', // or 'POST'
-            body: JSON.stringify(data),
-            headers: { 'Content-Type': 'application/json' }
+          method: 'POST', // or 'PUT'
+          body: JSON.stringify(data), // data can be `string` or {object}!
+          headers:{ 'Content-Type': 'application/json' }
         }).then(res => res.json())
-            .catch(error => console.error('Error:', error))
-            .then(response => {
-                document.getElementById('main').innerHTML = `<h2> Producto Modificado Con exito </h2>`
-                console.log('Success:', response)
-            });
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
 
+        formulario.reset()
 
     })
 }
 
-export default EditaProducto
+export default IngresaProducto
