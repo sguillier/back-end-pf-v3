@@ -24,10 +24,10 @@ const Productos = async () => {
                 $ ${item.precio} usd
             </div>
             <div class="item-card-button-container">
-                <button id="item-card-button-delete-${item.id}" class="item-card-button-delete">
+                <button id="item-card-button-delete-${item.id}" class="btn btn-warning item-card-button-delete">
                     Eliminar
                 </button>
-                <button id="item-card-button-edit-${item.id}" class="item-card-button-edit">
+                <button id="item-card-button-edit-${item.id}" class="btn btn-warning item-card-button-edit">
                     Editar
                 </button>
             </div>

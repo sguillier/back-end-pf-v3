@@ -16,19 +16,27 @@ const Carritos = async () => {
         <div class="item-card">
             <div>
                 Id: ${item.id}
-                <br>
+                <hr>
                 Creado: <br> 
                 ${item.creado}
                 <br>
                 Modificado: <br>
                 ${item.modificado}
+                <hr>
+                Usuario: <br>
+                ${item.usuario.firstname} ${item.usuario.lastname}
+                <br>
+                Correo: <br>
+                ${item.usuario.id}
+                <hr>
             </div>`
+        console.log(item.usuario)
 
         html += `<div class="item-card-button-container">
-                <button id="item-card-button-delete-${item.id}" class="item-card-button-delete">
+                <button id="item-card-button-delete-${item.id}" class="btn btn-danger item-card-button-delete">
                     Eliminar
                 </button>
-                <button id="item-card-button-edit-${item.id}" class="item-card-button-edit">
+                <button id="item-card-button-edit-${item.id}" class="btn btn-danger item-card-button-edit">
                     Editar
                 </button>
             </div>

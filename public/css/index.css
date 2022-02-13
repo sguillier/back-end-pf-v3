@@ -70,3 +70,8 @@ h1 {
 .nav-link{
     cursor: pointer;
 }
+
+.chat-img {
+  height: 30px;
+  margin-right: 10px;
+}

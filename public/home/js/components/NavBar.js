@@ -1,4 +1,4 @@
-import {URL_RAIZ} from "../../../url/index.js"
+import { URL_RAIZ } from "../../../url/index.js"
 import EnviaCarrito from "./EnviaCarrito.js"
 import IngresaProducto from "./IngresaProducto.js"
 import Productos from "./Productos.js"
@@ -12,6 +12,7 @@ const NavBar = async (user) => {
 
 
     let html = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img class="chat-img" src=${user.avatar}>
         <a class="navbar-brand" href="#">Hola ${user.firstname}</a>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -35,7 +36,7 @@ const NavBar = async (user) => {
         </ul>
         </div>
         <div>
-            <a id="logout-button" class="nav-logout">logout</a>
+            <button id="button-logout" type="button" class="btn btn-primary">Salir</button>
         </div>
       </nav>`
 
@@ -63,7 +64,7 @@ const NavBar = async (user) => {
     })
 
 
-    const botonLogOut = document.getElementById("logout-button")
+    const botonLogOut = document.getElementById("button-logout")
     botonLogOut.addEventListener('click', async () => {
         const request = await fetch(URL_RAIZ + '/api/auth/logout')
         html = `

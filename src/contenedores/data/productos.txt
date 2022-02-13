@@ -10,5 +10,11 @@
     "nombre": "Calculadora",
     "precio": "348",
     "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-512.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Cuaderno",
+    "precio": "8900",
+    "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png"
   }
 ]
